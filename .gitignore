@@ -1,0 +1,16 @@
+# Secrets and local state
+*.key
+asr.key
+proxy.env
+*.env
+voice-text.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,18 @@
+[Unit]
+Description=Zhipu voice ASR daemon (Xiaomi RC003)
+After=default.target
+
+[Service]
+Type=simple
+Environment=PULSE_SERVER=unix:/mnt/wslg/PulseServer
+Environment=ZHIPU_WIN_TOOLS=/mnt/c/Users/__WIN_USER__/Tools
+Environment=ZHIPU_INJECT_PS1=C:\Users\__WIN_USER__\Tools\inject-text.ps1
+EnvironmentFile=-%h/.config/zhipu/proxy.env
+ExecStart=/usr/bin/python3 %h/.local/bin/zhipu-voice-daemon.py
+Restart=always
+RestartSec=3
+StandardOutput=append:/tmp/zhipu-daemon.log
+StandardError=append:/tmp/zhipu-daemon.log
+
+[Install]
+WantedBy=default.target
