@@ -81,6 +81,8 @@ bash install.sh
    - 目的：让语音键只触发 Axonkey 的音频转发，不再触发其他动作
 5. 确认 Windows「声音 → 输入」的默认设备是 `Quarbor Virtual Microphone`
 
+![Axonkey 语音键设为禁用](docs/images/axonkey-voice-disabled.png)
+
 > 遥控器按键映射和语音输入是两条独立链路。本项目的语音 daemon 只读取 `Quarbor Virtual Microphone` 的音频，不依赖 Axonkey 的按键映射。
 
 ---
@@ -157,3 +159,7 @@ tail -20 /tmp/zhipu-daemon.log
 
 - [Axonkey](https://github.com/leowzz/axonkey) — RC003 按键映射与音频转发
 - [智谱 GLM-ASR-2512](https://docs.bigmodel.cn/) — 语音识别
+
+## License
+
+[MIT](LICENSE)
